@@ -6,6 +6,10 @@
     color: #012;
     background-color: #FFF; }
 
+  h3 {
+    padding-top: 10px;
+  }
+
   a {
     color: #57A;
     font-weight: bold;
@@ -21,6 +25,11 @@
   
   .small {
     font-size: 70%;
+  }
+
+  .funky-img {
+    height: 150px;
+    text-align: left !important;
   }
 
   blockquote {

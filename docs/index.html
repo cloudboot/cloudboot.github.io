@@ -43,13 +43,61 @@
 <h2 id="key-features">Key Features</h2>
 <ul>
   <li><strong>Easy Deployment</strong> With cloudboot, deploying your cloud functions is a breeze.</li>
-  <li><strong>Serverless ready templates</strong> for You Access a variety of serverless ready templates to start your projects with a helping hand.</li>
+  <li><strong>Effortless trigger setup</strong> Define and configure triggers with ease, choosing from HTTP, Firestore, PubSub, or Storage bucket triggers. Let cloudboot automatically create trigger resources upon deployment</li>
+  <li><strong>Serverless ready templates</strong> For You. Access a variety of serverless ready templates to start your projects with a helping hand.</li>
   <li><strong>Project Management</strong> Keep your faas/microservices projects organized and easy to handle.</li>
 </ul>
 
-<div id="describe-text">
-	Stay tuned for future updates, as cloudboot has plans to add more features and improvements.
-</div>
+<p><br /></p>
+<h2 id="installation-and-running-instructions">Installation and Running Instructions.</h2>
+
+<h3 id="samurai-way-run-the-cli-with-docker">Samurai way: <a href="https://github.com/cloudboot/cli-docker/tree/main">Run the CLI with Docker</a>.</h3>
+
+<h4 id="linux-bash">Linux, bash</h4>
+
+<p>In a Bash terminal, use the following command to build the Cloud Boot Docker image:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> <span class="s2">"cloudboot:latest"</span> - &lt; &lt;<span class="o">(</span>curl <span class="nt">-s</span> <span class="s2">"https://raw.githubusercontent.com/cloudboot/cli-docker/main/Dockerfile"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Then, run the configuration script:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh &lt;<span class="o">(</span>curl <span class="nt">-s</span> <span class="s2">"https://raw.githubusercontent.com/cloudboot/cli-docker/main/install.sh"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<h4 id="windows-powershellv7x">Windows, powershell(v7.x)</h4>
+<p>To build the Docker image in a PowerShell terminal(Run as administrator), run the following command:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>Invoke-WebRequest <span class="nt">-Uri</span> <span class="s2">"https://raw.githubusercontent.com/cloudboot/cli-docker/main/Dockerfile"</span> <span class="nt">-Method</span> Get <span class="nt">-ContentType</span> Text<span class="o">)</span>.Content | docker build <span class="nt">-t</span> <span class="s2">"cloudboot:latest"</span> -
+</code></pre></div></div>
+
+<p>Then, run the configuration script:</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span>Invoke-WebRequest <span class="nt">-Uri</span> <span class="s2">"https://raw.githubusercontent.com/cloudboot/cli-docker/main/install.ps1"</span> <span class="nt">-Method</span> Get <span class="nt">-ContentType</span> Text<span class="o">)</span>.Content | Invoke-Expression
+</code></pre></div></div>
+
+<h3 id="the-ronin-run-the-pythonic-cli-on-your-own">The Ronin: <a href="https://github.com/cloudboot/cli">Run the Pythonic CLI on your own</a>.</h3>
+
+<ol>
+  <li>
+    <p>Install the Google Cloud CLI. Please refer the <a href="https://cloud.google.com/sdk/docs/install">official installation guide</a>.</p>
+  </li>
+  <li>
+    <p>Install the Python library,</p>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>cloudboot
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="stay-tuned-for-future-updates">Stay tuned for future updates.</h3>
+<p>CloudBoot is actively being developed, with plans to add more features and improvements in the future. Stay tuned for exciting updates that will further enhance your serverless development experience with GCP.</p>
+
+<p><br /></p>
+<h5 id="please-note">Please note:</h5>
+
+<p>This product is not officially endorsed by Google.
+You should use this product at your own risk.</p>
+
+<h5 id="disclaimer">Disclaimer:</h5>
+
+<p>Google is not responsible for any damages caused by the use of this product.</p>
 
 
 <div class="about">
